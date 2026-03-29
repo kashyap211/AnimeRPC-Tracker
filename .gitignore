@@ -1,0 +1,37 @@
+# 🐍 Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 🧪 Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# 🔐 Environment variables (IMPORTANT)
+.env
+
+# 🧾 Logs
+*.log
+
+# 🖥️ OS files
+.DS_Store
+Thumbs.db
+
+# 🧠 IDEs / Editors
+.vscode/
+.idea/
+
+# 📦 Distribution / build files
+build/
+dist/
+*.egg-info/
+
+# 🧪 pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 🚀 Python packaging
+*.egg
