@@ -61,7 +61,7 @@ def get_aniwatch():
             if len(parts) > 1:
                 anime_part = parts[1]
 
-                # 🔥 Extract episode if present
+                
                 match = re.search(r"(.*?)\s+episode\s+(\d+)", anime_part, re.IGNORECASE)
 
                 if match:
@@ -69,7 +69,7 @@ def get_aniwatch():
                     episode = match.group(2).strip()
                     return anime_name, episode
 
-                # fallback (no episode found)
+                
                 anime_name = anime_part.split("English")[0].strip()
                 return anime_name, None
 
@@ -138,14 +138,14 @@ try:
         if anime:
             anime_clean = anime.strip().lower()
 
-            # 🔥 ICON LOGIC
+           
             img = "ani"
             for key in ICONS:
                 if key in anime_clean:
                     img = ICONS[key]
                     break
 
-            # 🔥 UPDATE if anime OR icon changed
+           
             if anime != last_anime or img != last_img:
                 if anime!=last_anime:
                     episode_counter=1
@@ -185,7 +185,7 @@ try:
                 last_ep_id=None
                 episode_counter=1
 
-    # 🔍 Debug (optional)
+    
 except KeyboardInterrupt:
     print("Exiting...")
     cleanup()
